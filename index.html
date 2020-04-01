@@ -2,11 +2,12 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!---->
-<title>情報システムQ&Aページ</title>
-<meta name="Description" content="情報システム課Q&Aページ" />
-<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!---->
+  <title>情報システムQ&Aページ</title>
+  <meta name="Description" content="情報システム課Q&Aページ" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 <div id="base">
@@ -18,8 +19,8 @@
     <ul>
       <li><a href="#">HOME</a></li>
       <li><a href="./01_PcAll/PcAll.html">PC全般</a></li>
-      <li><a href="#">サイボウズ</a></li>
-      <li><a href="#">スマホ</a></li>
+      <li><a href="./02_cybozu/cybozu.html">サイボウズ</a></li>
+      <li><a href="./03_mobilePhone/mobilePhone.html">スマホ</a></li>
       <li><a href="#">その他</a></li>
       <li><a href="#">Menu005</a></li>
     </ul>
@@ -40,29 +41,32 @@
           </p>
         <h3>内容の閲覧方法について</h3>
           <p>
-            ページの構造は下記の通り<br>
-            　(1)操作説明文<br>
-            　(2)動画<br>
-            　(3)他質問へのリンク<br>
-            　　他質問へのリンクをクリックすると、操作説明文と動画が切り替わります。<br>
-            　　InternetExplorarを使用している場合、画面下部の"ブロックされているコンテンツの許可"ボタンを押してください。
-          </p>
-          <p>
-            　(1)動画説明文<br>
-            　　テストテストテスト<br>
-          </p>
-          <p>
+            各カテゴリごとによくある質問の項目をまとめたページへ移動します。<br>
+            ページの構造は下記の通りです。<br>
+            　(1)よくある質問リスト<br>
             　(2)説明動画<br>
-            <video id="mainvideo" width="480px" height="270px" src="./video/test1.mp4" controls></video><br>
+            　　質問リストをクリックすると、説明動画が切り替わります。<br>
           </p>
-          <a>
-           　 (3)質問回答リスト<br>
-          <ul class="videoList">
-            <li><a href="#">■VPN接続の接続方法が分からない</a></li>
-            <li>■cybozudesktopを使いたい</li>
-            <li>■通常開くソフトを変更したい</li>
-          </ul>
-          </a>
+          <p>
+            　【動作テスト】<br>
+            　(1)よくある質問リスト<br>
+            　　<a id = "videotest">■動作テスト用</a><br>
+          </p>
+          <p>
+            　(2)説明動画(上記の動作テストをクリックすると表示されます）<br>
+          </p>
+          <div id = "mainvideo">
+          </div>
+          <script type="text/javascript">
+            $(function(){
+              $('#videotest').click(function(){
+                var index = $(this).index() + 1;
+                var linktext = '<video width= "480px" height="270px" src="./video/test.mp4" controls></video><br>)';
+                var video = document.getElementById('mainvideo');
+                video.innerHTML = linktext;
+              });
+            });
+            </script>
       </div>
     </div>
     <!--contents end-->
@@ -72,8 +76,8 @@
         <ul>
           <li><a href="#">HOME</a></li>
           <li><a href="./01_PcAll/PcAll.html">PC全般</a></li>
-          <li><a href="#">サイボウズ</a></li>
-          <li><a href="#">スマホ</a></li>
+          <li><a href="./02_cybozu/cybozu.html">サイボウズ</a></li>
+          <li><a href="./03_mobilePhone/mobilePhone.html">スマホ</a></li>
           <li><a href="#">その他</a></li>
           <li><a href="#">Menu005</a></li>
         </ul>
@@ -94,8 +98,8 @@
     <ul>
       <li><a href="#">HOME</a></li>
       <li><a href="./01_PcAll/PcAll.html">PC全般</a></li>
-      <li><a href="#">サイボウズ</a></li>
-      <li><a href="#">スマホ</a></li>
+      <li><a href="./02_cybozu/cybozu.html">サイボウズ</a></li>
+      <li><a href="./03_mobilePhone/mobilePhone.html">スマホ</a></li>
       <li><a href="#">その他</a></li>
       <li><a href="#">Menu005</a></li>
     </ul>

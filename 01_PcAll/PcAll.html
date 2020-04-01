@@ -6,7 +6,8 @@
 <!---->
 <title>情報システムQ&Aページ</title>
 <meta name="Description" content="情報システム課Q&Aページ" />
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="../style.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 <div id="base">
@@ -17,10 +18,10 @@
   <div id="nav">
     <ul>
       <li><a href="../index.html">HOME</a></li>
-      <li><a href="#">PC全般</a></li>
-      <li><a href="#">サイボウズ</a></li>
-      <li><a href="#">スマホ</a></li>
-      <li><a href="#">その他</a></li>
+      <li><a href="./PcAll.html">PC全般</a></li>
+      <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
+      <li><a href="../03_mobilePhone/mobilePhone.html">スマホ</a></li>
+      <li><a href="../04_other/other.html">その他</a></li>
       <li><a href="#">Menu005</a></li>
     </ul>
   </div>
@@ -34,14 +35,27 @@
             The size of the background image is 570px×230px.</p>
         </div>
         -->
-        <h3>PC全般のよくある質問</h3>
+        <h3>PC全般でよくある質問</h3>
           <ul class="videoList">
-            <li><a href="#">■VPN接続の接続方法が分からない</a></li>
-            <li><a href="#">■cybozudesktopを使いたい</a></li>
-            <li><a href="#">■通常開くソフトを変更したい</a></li>
+            <li>■VPN接続の接続方法が分からない</li>
+            <li>■cybozudesktopを使いたい</li>
+            <li>■通常開くソフトを変更したい</li>
           </ul>
           </a>
       </div>
+      <div id="mainvideo">
+        
+      </div>
+      <script type="text/javascript">
+      $(function(){
+        $('.videoList li').click(function(){
+          var index = $(this).index() + 1;
+          var linktext = '<video width= "480px" height="270px" src="./video/'+ index +'.mp4" controls></video><br>)';
+          var video = document.getElementById('mainvideo');
+          video.innerHTML = linktext;
+        });
+      });
+      </script>
     </div>
     <!--contents end-->
     <div id="side">
@@ -49,10 +63,10 @@
         <h3>Site Menu</h3>
         <ul>
           <li><a href="../index.html">HOME</a></li>
-          <li><a href="#">PC全般</a></li>
-          <li><a href="#">サイボウズ</a></li>
-          <li><a href="#">スマホ</a></li>
-          <li><a href="#">その他</a></li>
+          <li><a href="./PcAll.html">PC全般</a></li>
+          <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
+          <li><a href="../03_mobilePhone/mobilePhone.html">スマホ</a></li>
+          <li><a href="../04_other/other.html">その他</a></li>
           <li><a href="#">Menu005</a></li>
         </ul>
       </div>
@@ -71,10 +85,10 @@
     <h3>情報システム課　Q&Aページ</h3>
     <ul>
       <li><a href="../index.html">HOME</a></li>
-      <li><a href="#">PC全般</a></li>
-      <li><a href="#">サイボウズ</a></li>
-      <li><a href="#">スマホ</a></li>
-      <li><a href="#">その他</a></li>
+      <li><a href="./PcAll.html">PC全般</a></li>
+      <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
+      <li><a href="../03_mobilePhone/mobilePhone.html">スマホ</a></li>
+      <li><a href="../04_other/other.html">その他</a></li>
       <li><a href="#">Menu005</a></li>
     </ul>
     <div id="tmplby">
