@@ -1,12 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!---->
-<title>情報システムQ&Aページ</title>
-<meta name="Description" content="情報システム課Q&Aページ" />
-<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>情報システムQ&Aページ</title>
+  <meta name="Description" content="情報システム課Q&Aページ" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 <div id="base">
@@ -21,27 +23,38 @@
       <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
       <li><a href="./mobilePhone.html">スマホ</a></li>
       <li><a href="../04_other/other.html">その他</a></li>
-      <li><a href="#">Menu005</a></li>
     </ul>
   </div>
   <div id="wrap">
+    <!--contents start-->
     <div id="contents">
       <div id="c_pad">
         <!--
-        <div id="top_img">
-          <p> <br />
-            Please change to arbitrary sentences. <br />
-            The size of the background image is 570px×230px.</p>
-        </div>
+          質問を追加する際には、下のリストを追加していく。
+          spanタグはホバーエフェクトのため
         -->
-        <h3>携帯電話全般でよくある質問</h3>
+        <h3>スマホ関係でよくある質問</h3>
           <ul class="videoList">
-            <li><a href="#">■VPN接続の接続方法が分からない</a></li>
-            <li><a href="#">■cybozudesktopを使いたい</a></li>
-            <li><a href="#">■通常開くソフトを変更したい</a></li>
+            <li><span class="QAlist">(1) テザリング接続をしたい</span></li>
+            <li><span class="QAlist">(2) スマホのデータをパソコンに移したい</span></li>
+            <li><span class="QAlist">(3) 通常開くソフトを変更したい</span></li>
           </ul>
-          </a>
       </div>
+     <!--動画を埋め込むdiv-->
+     <div id="mainvideo">
+        
+     </div>
+      <!--動画埋め込みのJS-->
+      <script type="text/javascript">
+      $(function(){
+        $('.videoList li').click(function(){
+          var index = $(this).index() + 1;  //クリックしたリストの要素番号を取得(1から順に)
+          var linktext = '<video width= "480px" height="270px" src="./video/'+ index +'.mp4" controls></video><br>'; //ディレクトリ video内の*.mp4を指定
+          var video = document.getElementById('mainvideo'); 
+          video.innerHTML = linktext; //id mainvideoに動画埋め込み
+        });
+      });
+      </script>
     </div>
     <!--contents end-->
     <div id="side">
@@ -53,18 +66,8 @@
           <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
           <li><a href="./mobilePhone.html">スマホ</a></li>
           <li><a href="../04_other/other.html">その他</a></li>
-          <li><a href="#">Menu005</a></li>
         </ul>
       </div>
-      <!--
-      <div class="side_box">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">運営者情報</a></li>
-          <li><a href="#">お問い合わせ</a></li>
-        </ul>
-      </div>
-      -->
     </div>
   </div>
   <div id="f_menu">
@@ -75,12 +78,9 @@
       <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
       <li><a href="./mobilePhone.html">スマホ</a></li>
       <li><a href="../04_other/other.html">その他</a></li>
-      <li><a href="#">Menu005</a></li>
     </ul>
     <div id="tmplby">
-
-Design by Kenji Ito</a>
-
+      Design by Kenji Ito</a>
     </div>
   </div>
   <address>

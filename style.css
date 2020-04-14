@@ -215,13 +215,31 @@ h1 a {
 }
 
 #contents ul {
-	margin-left: 30px;
+	margin-left: 10px;
 	list-style-type: none;
+	border: double 4px #21b384;
+	padding: 0.5em 1em 0.5em 2.3em;
+	position: relative;
 }
+
+#contents li {
+	font-size: 12px;
+	padding-left: 2em;
+	position: relative;
+	list-style-type:none!important;
+}
+
+#contents li:before{
+	font-family: "Font Awesome 5 Free";
+	content: "\f0a4";
+	position: absolute;
+	left : 1em;
+	color: #21b384;
+}
+
 #contents li a {
 	font-size: 12px;
 }
-
 
 #contents #c_pad {
 	padding: 10px;
@@ -272,17 +290,19 @@ h1 a {
 
 .videoList li{
 	margin-top: 10px;
-	transition: color .3s;
 }
 
-.videoList li:hover{
-	color: goldenrod;
-	background-color: lightblue;
+.QAlist{
+	transition: color .1s;	
+}
+
+.QAlist:hover{
+	color: red;
+	background-color: lightblue;	
 }
 
 #mainvideo{
-	text-align: center;
-	margin-left: 40px;
+	margin-left: 30px;
 }
 
 /*

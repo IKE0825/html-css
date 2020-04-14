@@ -6,6 +6,8 @@
 <!---->
 <title>情報システムQ&Aページ</title>
 <meta name="Description" content="情報システム課Q&Aページ" />
+	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <link rel="stylesheet" href="../style.css" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
@@ -22,37 +24,36 @@
       <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
       <li><a href="../03_mobilePhone/mobilePhone.html">スマホ</a></li>
       <li><a href="../04_other/other.html">その他</a></li>
-      <li><a href="#">Menu005</a></li>
     </ul>
   </div>
   <div id="wrap">
+    <!--contents start-->
     <div id="contents">
       <div id="c_pad">
         <!--
-        <div id="top_img">
-          <p> <br />
-            Please change to arbitrary sentences. <br />
-            The size of the background image is 570px×230px.</p>
-        </div>
+          質問を追加していく際には、ここでリストを追加していく
         -->
         <h3>PC全般でよくある質問</h3>
           <ul class="videoList">
-            <li>■VPN接続の接続方法が分からない</li>
-            <li>■cybozudesktopを使いたい</li>
-            <li>■通常開くソフトを変更したい</li>
+            <li><span class="QAlist">(1) サーバーのアイコンがデスクトップにない</span></li>
+            <li><span class="QAlist">(2) 東京、名古屋、関西のプリンタが表示されない</span></li>
+            <li><span class="QAlist">(3) 通常使うプリンタを変更したい</span></li>
+            <li><span class="QAlist">(4) 外部でネットに接続したい、サーバーを閲覧したい</span></li>
           </ul>
           </a>
       </div>
+      <!--動画を埋め込むdiv-->
       <div id="mainvideo">
         
       </div>
+      <!--動画埋め込みのJS-->
       <script type="text/javascript">
       $(function(){
         $('.videoList li').click(function(){
-          var index = $(this).index() + 1;
-          var linktext = '<video width= "480px" height="270px" src="./video/'+ index +'.mp4" controls></video><br>)';
-          var video = document.getElementById('mainvideo');
-          video.innerHTML = linktext;
+          var index = $(this).index() + 1;  //クリックしたリストの要素番号を取得(1から順に)
+          var linktext = '<video width= "480px" height="270px" src="./video/'+ index +'.mp4" controls></video><br>'; //ディレクトリ video内の*.mp4を指定
+          var video = document.getElementById('mainvideo'); 
+          video.innerHTML = linktext; //id mainvideoに動画埋め込み
         });
       });
       </script>
@@ -67,18 +68,8 @@
           <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
           <li><a href="../03_mobilePhone/mobilePhone.html">スマホ</a></li>
           <li><a href="../04_other/other.html">その他</a></li>
-          <li><a href="#">Menu005</a></li>
         </ul>
       </div>
-      <!--
-      <div class="side_box">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">運営者情報</a></li>
-          <li><a href="#">お問い合わせ</a></li>
-        </ul>
-      </div>
-      -->
     </div>
   </div>
   <div id="f_menu">
@@ -89,16 +80,15 @@
       <li><a href="../02_cybozu/cybozu.html">サイボウズ</a></li>
       <li><a href="../03_mobilePhone/mobilePhone.html">スマホ</a></li>
       <li><a href="../04_other/other.html">その他</a></li>
-      <li><a href="#">Menu005</a></li>
     </ul>
     <div id="tmplby">
 
-Design by Kenji Ito</a>
+      Design by Kenji Ito</a>
 
     </div>
   </div>
   <address>
-  Copyright (C) IKE0825
+    Copyright (C) IKE0825
   </address>
 </div>
 </body>
