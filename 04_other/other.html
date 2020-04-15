@@ -29,32 +29,18 @@
     <!--contents start-->
     <div id="contents">
       <div id="c_pad">
-        <!--
-          質問を追加する際には、下のリストを追加していく。
-          spanタグはホバーエフェクトのため
-        -->
         <h3>その他　よくある質問</h3>
-          <ul class="videoList">
-            <li><span class="QAlist">(1) cybozuの通知が出るようにしたい</span></li>
-            <li><span class="QAlist">(2) メールの容量がいっぱいになってしまった</span></li>
-            <li><span class="QAlist">(3) 通常開くソフトを変更したい</span></li>
-          </ul>
+        <!--質問を追加していく際には、ここから-->
+        <div class= "cp_actab">
+          <input id= "tab-1" type= "checkbox" name= "tabs2">
+          <label for= "tab-1">準備中・・・</label>
+          <div class= "cp_actab-content">
+            <p>テキスト</p>
+            <video class="insertvideo" width= "480px" height="270px" src="./video/テザリング接続.mp4" controls></video><br><br> <!--ここでビデオの参照先指定-->
+          </div>
+        </div>
+        <!--ここまでをコピーして追加していく--> 
       </div>
-     <!--動画を埋め込むdiv-->
-     <div id="mainvideo">
-        
-     </div>
-      <!--動画埋め込みのJS-->
-      <script type="text/javascript">
-      $(function(){
-        $('.videoList li').click(function(){
-          var index = $(this).index() + 1;  //クリックしたリストの要素番号を取得(1から順に)
-          var linktext = '<video width= "480px" height="270px" src="./video/'+ index +'.mp4" controls></video><br>'; //ディレクトリ video内の*.mp4を指定
-          var video = document.getElementById('mainvideo'); 
-          video.innerHTML = linktext; //id mainvideoに動画埋め込み
-        });
-      });
-      </script>
     </div>
     <!--contents end-->
     <div id="side">

@@ -29,32 +29,36 @@
     <!--contents start-->
     <div id="contents">
       <div id="c_pad">
-        <!--
-          質問を追加する際には、下のリストを追加していく。
-          spanタグはホバーエフェクトのため
-        -->
-        <h3>Cybozu関係でよくある質問</h3>
-          <ul class="videoList">
-            <li><span class="QAlist">(1) 楽楽精算のページが表示されない</span></li>
-            <li><span class="QAlist">(2) メールの容量がいっぱいになってしまった</span></li>
-            <li><span class="QAlist">(3) Cybozuの通知をデスクトップに表示させたい</span></li>
-          </ul>
-      </div>
-     <!--動画を埋め込むdiv-->
-     <div id="mainvideo">
-        
-     </div>
-      <!--動画埋め込みのJS-->
-      <script type="text/javascript">
-      $(function(){
-        $('.videoList li').click(function(){
-          var index = $(this).index() + 1;  //クリックしたリストの要素番号を取得(1から順に)
-          var linktext = '<video width= "480px" height="270px" src="./video/'+ index +'.mp4" controls></video><br>'; //ディレクトリ video内の*.mp4を指定
-          var video = document.getElementById('mainvideo'); 
-          video.innerHTML = linktext; //id mainvideoに動画埋め込み
-        });
-      });
-      </script>
+        <h3>サイボウズ関係でよくある質問</h3>
+        <h4><i class="fas fa-globe" style="margin-right: 5px"></i>Garoon関係</h4>
+        <!--質問を追加していく際には、ここから-->
+        <div class= "cp_actab">
+          <input id= "tab-1" type= "checkbox" name= "tabs2">
+          <label for= "tab-1">Cybozuの通知をデスクトップに表示させたい</label>
+          <div class= "cp_actab-content">
+            <p>テキスト</p>
+            <video class="insertvideo" width= "480px" height="270px" src="./video/サーバーアイコン.mp4" controls></video><br><br> <!--ここでビデオの参照先指定-->
+          </div>
+        </div>
+        <!--ここまでをコピーして追加していく-->
+        <div class= "cp_actab">
+          <input id= "tab-2" type= "checkbox" name= "tabs2">
+          <label for= "tab-2">メールの容量がいっぱいになってしまった</label>
+          <div class= "cp_actab-content">
+            <p>テキスト</p>
+            <video class="insertvideo" width= "480px" height="270px" src="./video/サーバーアイコン.mp4" controls></video><br><br> <!--ここでビデオの参照先指定-->
+          </div>
+        </div>
+        <!--ここまでをコピーして追加していく-->
+        <div class= "cp_actab">
+          <input id= "tab-3" type= "checkbox" name= "tabs2">
+          <label for= "tab-3">楽楽精算のページが表示されない</label>
+          <div class= "cp_actab-content">
+            <p>テキスト</p>
+            <video class="insertvideo" width= "480px" height="270px" src="./video/楽楽精算.mp4" controls></video><br><br> <!--ここでビデオの参照先指定-->
+          </div>
+        </div>
+      </div> 
     </div>
     <!--contents end-->
     <div id="side">

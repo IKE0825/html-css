@@ -32,34 +32,6 @@
         <p>本ページは情報システム課への問い合わせとして、特に多いものについてまとめたものになります。<br>
         　ページへのアクセスは<span class="font-red">社内ネットワークに参加しているPCのみ可能</span>ですので、外部から閲覧する場合は<span class="font-red">VPN接続</span>をご利用ください。<br>
           </p>
-        <h3>内容の閲覧方法について</h3>
-          <p>
-            各カテゴリごとによくある質問の項目をまとめたページへ移動します。<br>
-            ページの構造は下記の通りです。<br>
-            　(1)よくある質問リスト<br>
-            　(2)説明動画<br>
-            　　質問リストをクリックすると、説明動画が切り替わります。<br>
-          </p>
-          <p>
-            　【動作テスト】<br>
-            　(1)よくある質問リスト<br>
-            　　<a id = "videotest"><span class="QAlist">■動作テスト用</span></a><br>
-          </p>
-          <p>
-            　(2)説明動画(上記の動作テストをクリックすると表示されます）<br>
-          </p>
-          <div id = "mainvideo">
-          </div>
-          <script type="text/javascript">
-            $(function(){
-              $('#videotest').click(function(){
-                var index = $(this).index() + 1;
-                var linktext = '<video width= "480px" height="270px" src="./video/test.mp4" controls></video><br>)';
-                var video = document.getElementById('mainvideo');
-                video.innerHTML = linktext;
-              });
-            });
-            </script>
       </div>
     </div>
     <!--contents end-->
